@@ -1,4 +1,5 @@
 import { Flex, Heading, Text } from "@chakra-ui/react"
+import SimpleCentered from "../PageSections/HeroSection/SimpleCentered"
 
 
 export default function Home() {
@@ -6,10 +7,12 @@ export default function Home() {
 
   return (
     <>
+      <SimpleCentered />
+
       <Flex direction="column">
-        <Heading size="5xl">Display 5xl</Heading>
-        <Heading size="4xl">Display 4xl</Heading>
-        <Heading size="3xl">Display 3xl</Heading>
+        <Heading as="h1" size="5xl">Display 5xl</Heading>
+        <Heading as="h1" size="4xl">Display 4xl</Heading>
+        <Heading as="h1" size="3xl">Display 3xl</Heading>
         <Heading as="h1">[h1] Display 2xl </Heading>
         <Heading as="h2">[h2] Display lg </Heading>
         <Heading as="h3">[h3] Display md </Heading>
