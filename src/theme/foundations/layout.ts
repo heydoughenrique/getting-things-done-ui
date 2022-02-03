@@ -1,3 +1,5 @@
+import theme from "@chakra-ui/theme";
+
 export const layout = {
     // Used for sections
     sizes: {

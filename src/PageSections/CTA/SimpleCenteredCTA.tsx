@@ -2,13 +2,14 @@ import { Flex, Container, Stack, Badge, Heading, Box, Text, Button } from '@chak
 import Link from 'next/link'
 
 
-export default function SimpleCentered({ badge, tagline, subtitle, cta }) {
+export default function SimpleCenteredCTA({ layerStyle, badge, tagline, subtitle, cta }) {
     return (
         <Flex
             as='section'
             w='full'
-            minH={'640px'}
-            align='center'>
+            minH={'480px'}
+            align='center'
+            layerStyle={layerStyle}>
 
             <Container
                 maxW={'container.2xl'}>
@@ -29,7 +30,7 @@ export default function SimpleCentered({ badge, tagline, subtitle, cta }) {
                         {tagline}
                     </Heading>
 
-                    <Text fontSize='xl' maxW={'lg'}>
+                    <Text fontSize='xl' maxW={'2xl'}>
                         {subtitle}
                     </Text>
 

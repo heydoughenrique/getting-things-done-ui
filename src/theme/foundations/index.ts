@@ -1,14 +1,14 @@
 import { colors } from './colors'
-import { headingStyles as Heading, textStyles as Text } from './typography'
+import { layout } from './layout'
+import { typography } from './typography'
+
+
 
 
 export const foundations = {
     ...colors,
-
-    components: {
-        Heading,
-        Text,
-    },
+    ...typography,
+    layout,
 
 };
 
