@@ -31,6 +31,8 @@ export default function Home() {
         subtitle={t.heroHome.subtitle}
         ctaPrimary={t.heroHome.cta}
         ctaSecondary=''
+        image=''
+        altImage=''
       />
 
       <Slider1Column />
