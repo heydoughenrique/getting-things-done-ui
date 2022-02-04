@@ -6,11 +6,11 @@ export default function ContactForm() {
     return (
         <>
             <Script src="https://unpkg.com/formik/dist/formik.umd.production.min.js" strategy="lazyOnload" />
-            <Formik
+            {/* <Formik
                 initialValues={{ email: '' }}
             >
 
-            </Formik>
+            </Formik> */}
 
             <FormControl>
                 <FormLabel htmlFor='email'>Email address</FormLabel>

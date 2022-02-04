@@ -1,7 +1,7 @@
 export const typography = {
     fonts: {
-        body: 'Montserrat, sans-serif',
-        heading: 'Montserrat, sans-serif',
+        body: 'Inter, sans-serif',
+        heading: 'Inter, sans-serif',
     },
 
     styles: {

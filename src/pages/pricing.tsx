@@ -1,6 +1,7 @@
 import MenuSimpleCentered from "../PageSections/Header/MenuSimpleCentered"
 import SimpleCentered from "../PageSections/HeroSection/SimpleCentered"
 
+
 import { useRouter } from 'next/router'
 import en from '../locales/en'
 import pt from '../locales/pt'

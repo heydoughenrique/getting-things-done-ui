@@ -27,6 +27,9 @@ export default function Atelier() {
 
 
             <Feature1
+                layerStyle=''
+                image=''
+                altText=''
                 badge='Sobre nós'
                 tagline='Psicóloga em São Paulo Katherine Avellar'
                 subtitle='Especialista em Terapia Cognitivo Comportamental e pós-graduada em “Neurociências do Comportamento”, também formada em: Transtornos de Ansiedade e Depressão, Programação Neurolinguística e Psicologia do Desenvolvimento e da Aprendizagem .'

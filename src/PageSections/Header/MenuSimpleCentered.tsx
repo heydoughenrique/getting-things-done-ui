@@ -18,6 +18,7 @@ export default function MenuSimpleCentered() {
 
     }
 
+
     const [display, changeDisplay] = useState('none')
 
     return (
@@ -26,6 +27,7 @@ export default function MenuSimpleCentered() {
             w='100vw'
             background='white'
             minH='80px'
+            zIndex='9999'
         >
             <Flex
                 mx='auto'

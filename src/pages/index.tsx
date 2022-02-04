@@ -1,3 +1,6 @@
+import { AppProps } from 'next/app'
+import Head from 'next/head';
+
 import { Flex, Heading, Text } from '@chakra-ui/react'
 import MenuSimpleCentered from '../PageSections/Header/MenuSimpleCentered'
 import SimpleTwoColumns from '../PageSections/HeroSection/SimpleTwoColumns'
@@ -6,10 +9,14 @@ import { useRouter } from 'next/router'
 import en from '../locales/en'
 import pt from '../locales/pt'
 import Slider1Column from '../components/Slider1Column'
+import Feature1 from '../PageSections/Features/feature1'
+import Feature1Inverted from '../PageSections/Features/feature1inverted';
+import SimpleCenteredCTA from '../PageSections/CTA/SimpleCenteredCTA';
+import FAQFooter from '../PageSections/Footer/FAQFooter';
 
 
 
-export default function Home() {
+export default function Home({ Component, pageProps }: AppProps) {
 
   const router = useRouter()
   const { locale } = router
@@ -23,6 +30,11 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Strides Digital®</title>
+        <meta name='description' content='Ajudamos você a encontrar a cortina ou persiana ideal. Solicite seu atendimento online.' />
+
+      </Head>
       <MenuSimpleCentered />
 
       <SimpleTwoColumns
@@ -31,36 +43,42 @@ export default function Home() {
         subtitle={t.heroHome.subtitle}
         ctaPrimary={t.heroHome.cta}
         ctaSecondary=''
-        image=''
+        image='/images/Strides/welcome-strides.png'
         altImage=''
       />
 
       <Slider1Column />
 
+      <Feature1
+        layerStyle='secondary'
+        image='/images/Strides/money-back.svg'
+        altText='Money back guarantee for our Website Subscription.'
+        badge=''
+        tagline='14 dias de garantia'
+        subtitle='Se dentro de 14 dias após a publicação do site você não ficar satisfeito, reembolsaremos seu dinheiro.'
+        ctaPrimary='Comece hoje'
+        ctaSecondary=''
+      />
+
+      <Feature1Inverted
+        layerStyle=''
+        image='/images/Strides/cancel-anytime.png'
+        altText='Cancel anytime'
+        badge=''
+        tagline='Cancele quando quiser'
+        subtitle='Sentimos ao ver você partir, mas se precisar cancelar seu plano, tudo bem. Sem contratos longos. Todos os nossos planos são mensais.'
+        ctaPrimary='Ok! Vamos lá!'
+        ctaSecondary='' />
+
+      <SimpleCenteredCTA
+        layerStyle=''
+        badge=''
+        tagline='Dê grandes passos com um ótimo website'
+        subtitle='Obtenha mais clientes com um site claro, simples e profissional a preços razoáveis.'
+        cta='Ver Planos e Preços' />
 
 
-      <Flex direction='column'>
-        <Heading fontSize='9xl'>Display 9xl</Heading>
-        <Heading fontSize='8xl'>Display 8xl</Heading>
-        <Heading fontSize='7xl'>Display 7xl</Heading>
-        <Heading fontSize='6xl'>Display 6xl</Heading>
-        <Heading as='h1' fontSize='5xl'>Display 5xl [h1]</Heading>
-        <Heading as='h2' fontSize='4xl'>Display 4xl [h2]</Heading>
-        <Heading as='h3' fontSize='3xl'>Display 3xl [h3]</Heading>
-        <Heading as='h4' fontSize='2xl'>Display 2xl [h4]</Heading>
-        <Heading as='h5' fontSize='xl' >Display xl  [h5]</Heading>
-        <Heading as='h2' fontSize='lg'>Display lg</Heading>
-        <Heading as='h3' fontSize='md'>Display md</Heading>
-        <Heading as='h4' fontSize='sm'>Display sm</Heading>
-        <Heading as='h5' fontSize='xs'>Display xs</Heading>
-
-
-        <Text fontSize='xl'>Text xl</Text>
-        <Text fontSize='lg'>Text lg</Text>
-        <Text fontSize='md'>Text md (Default)</Text>
-        <Text fontSize='sm'>Text sm</Text>
-        <Text fontSize='xs'>Text xs</Text>
-      </Flex>
+      <FAQFooter />
 
     </>
   )

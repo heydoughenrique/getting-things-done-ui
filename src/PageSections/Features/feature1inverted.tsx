@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import en from '../../locales/en'
 import pt from '../../locales/pt'
 
-export default function Feature1({ layerStyle, image, altText, badge, tagline, subtitle, ctaPrimary, ctaSecondary, }) {
+export default function Feature1Inverted({ layerStyle, image, altText, badge, tagline, subtitle, ctaPrimary, ctaSecondary, }) {
     const router = useRouter()
     const { locale } = router
     const t = locale === 'en' ? en : pt
@@ -38,22 +38,6 @@ export default function Feature1({ layerStyle, image, altText, badge, tagline, s
                     mx={'auto'}>
 
 
-                    <Box
-
-                        position='relative'
-                        w='full'
-                        flex='1'
-                    >
-                        <Image
-                            width="100%"
-                            height="70%"
-                            layout="responsive"
-                            objectFit="contain"
-                            src={image}
-                            alt={altText} />
-                    </Box>
-
-
                     <VStack
                         justify='flex-start'
                         spacing={4}
@@ -81,7 +65,23 @@ export default function Feature1({ layerStyle, image, altText, badge, tagline, s
 
                     </VStack>
 
+                    <Box
+                        position='relative'
+                        w='full'
+                        flex='1'
+                    >
+                        <Image
+                            width="100%"
+                            height="70%"
+                            layout="responsive"
+                            objectFit="contain"
+                            src={image}
+                            alt={altText} />
+                    </Box>
+
                 </Stack>
+
+
 
             </Container >
         </Flex >
