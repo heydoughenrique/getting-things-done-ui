@@ -1,89 +1,91 @@
-import { Flex, Container, Stack, Badge, Heading, Box, VStack, Text, Button, ButtonGroup } from '@chakra-ui/react'
+import {
+  Badge,
+  Box,
+  Button,
+  ButtonGroup,
+  Container,
+  Flex,
+  Stack,
+  Text,
+  VStack,
+} from '@chakra-ui/react'
 
 import Image from 'next/image'
-
-import { useRouter } from 'next/router'
 import en from '../../locales/en'
 import pt from '../../locales/pt'
+import {useRouter} from 'next/router'
 
-export default function Feature1({ layerStyle, image, altText, badge, tagline, subtitle, ctaPrimary, ctaSecondary, }) {
-    const router = useRouter()
-    const { locale } = router
-    const t = locale === 'en' ? en : pt
+type FeatureProps = {
+  layerStyle: string
+  image: string
+  altText: string
+  badge: string
+  tagline: string
+  subtitle: string
+  ctaPrimary: string
+  ctaSecondary?: string
+}
 
-    const changeLanguage = (e) => {
-        const locale = e.target.value;
-        router.push('/', '/', { locale })
-    }
+export default function Feature1(props: FeatureProps) {
+  const router = useRouter()
+  const {locale} = router
+  const t = locale === 'en' ? en : pt
 
-    return (
-        <Flex
-            as='section'
-            layerStyle={layerStyle}
-            w='full'
-            minH={'640px'}
-            align='center'
+  return (
+    <Flex
+      as='section'
+      align='center'
+      layerStyle={props.layerStyle}
+      minH={'640px'}
+      w='full'
+    >
+      <Container maxW={'container.2xl'}>
+        <Stack
+          as={Flex}
+          flexDirection={['column', 'row']}
+          alignItems='center'
+          maxW={'7xl'}
+          spacing={['0', '40px']}
+          py={['0', '24px']}
+          mx={'auto'}
         >
+          <Box position='relative' w='full' flex='1'>
+            <Image
+              width='100%'
+              height='70%'
+              layout='responsive'
+              objectFit='contain'
+              src={props.image}
+              alt={props.altText}
+            />
+          </Box>
 
-            <Container
-                maxW={'container.2xl'}>
+          <VStack justify='flex-start' spacing={4} align='flex-start' flex='1'>
+            <Badge
+              variant='solid'
+              background='secondary.500'
+              color='secondary.800'
+            >
+              {props.badge}
+            </Badge>
 
-                <Stack
-                    as={Flex}
-                    flexDirection={['column', 'row']}
-                    alignItems='center'
-                    maxW={'7xl'}
-                    spacing={['0', '40px']}
-                    py={['0', '24px']}
-                    mx={'auto'}>
+            <Text as='h2'>{props.tagline}</Text>
 
+            <Text fontSize='lg' maxW={'lg'}>
+              {props.subtitle}
+            </Text>
 
-                    <Box
-
-                        position='relative'
-                        w='full'
-                        flex='1'
-                    >
-                        <Image
-                            width="100%"
-                            height="70%"
-                            layout="responsive"
-                            objectFit="contain"
-                            src={image}
-                            alt={altText} />
-                    </Box>
-
-
-                    <VStack
-                        justify='flex-start'
-                        spacing={4}
-                        align='flex-start'
-                        flex='1'
-                    >
-                        <Badge variant='solid' background='secondary.500' color='secondary.800'>{badge}</Badge>
-
-                        <Heading as='h2' fontSize='4xl'>
-                            {tagline}
-                        </Heading>
-
-                        <Text fontSize='lg' maxW={'lg'}>
-                            {subtitle}
-                        </Text>
-
-                        <ButtonGroup>
-                            <Button variant='solid' size='lg'>
-                                {ctaPrimary}
-                            </Button>
-                            <Button variant='solid' size='lg'>
-                                {ctaSecondary}
-                            </Button>
-                        </ButtonGroup>
-
-                    </VStack>
-
-                </Stack>
-
-            </Container >
-        </Flex >
-    )
+            <ButtonGroup>
+              <Button variant='solid' size='lg'>
+                {props.ctaPrimary}
+              </Button>
+              {/* <Button variant='solid' size='lg'>
+                                {props.ctaSecondary}
+                            </Button> */}
+            </ButtonGroup>
+          </VStack>
+        </Stack>
+      </Container>
+    </Flex>
+  )
 }

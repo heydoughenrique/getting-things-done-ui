@@ -1,18 +1,13 @@
-import { Flex, Container, Stack, Badge, Box, Image, VStack, Text, Button, ButtonGroup } from '@chakra-ui/react'
+import { Badge, Box, Button, ButtonGroup, Container, Flex, Image, Stack, Text, VStack } from '@chakra-ui/react'
 
-import { useRouter } from 'next/router'
 import en from '../../locales/en'
 import pt from '../../locales/pt'
+import { useRouter } from 'next/router'
 
 export default function Feature2({ badge, tagline, subtitle, ctaPrimary, ctaSecondary }) {
     const router = useRouter()
     const { locale } = router
     const t = locale === 'en' ? en : pt
-
-    const changeLanguage = (e) => {
-        const locale = e.target.value;
-        router.push('/', '/', { locale })
-    }
 
     return (
         <Flex

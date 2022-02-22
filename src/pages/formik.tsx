@@ -1,15 +1,15 @@
 import * as React from 'react';
-import { Formik, Field, Form, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
 
 import {
     Button,
     FormControl,
-    FormLabel,
     FormErrorMessage,
     FormHelperText,
+    FormLabel,
     Input,
 } from "@chakra-ui/react"
+import { Field, Form, Formik, FormikHelpers } from 'formik';
 
 export default function FormikExample() {
     function validateName(value) {

@@ -1,18 +1,13 @@
-import { Flex, Container, Stack, Badge, Heading, Box, Image, VStack, Text, Button, ButtonGroup } from '@chakra-ui/react'
+import { Badge, Box, Container, Flex, Image, Stack, Text, VStack } from '@chakra-ui/react'
 
-import { useRouter } from 'next/router'
 import en from '../../locales/en'
 import pt from '../../locales/pt'
+import { useRouter } from 'next/router'
 
 export default function ContactWithImage({ badge, tagline, subtitle }) {
     const router = useRouter()
     const { locale } = router
     const t = locale === 'en' ? en : pt
-
-    const changeLanguage = (e) => {
-        const locale = e.target.value;
-        router.push('/', '/', { locale })
-    }
 
     return (
         <Flex
@@ -49,9 +44,9 @@ export default function ContactWithImage({ badge, tagline, subtitle }) {
                     >
                         <Badge variant='solid' background='secondary.500' color='secondary.800'>{badge}</Badge>
 
-                        <Heading as='h1' fontSize='6xl'>
+                        <Text as='h1'>
                             {tagline}
-                        </Heading>
+                        </Text>
 
                         <Text fontSize='xl' maxW={'lg'}>
                             {subtitle}

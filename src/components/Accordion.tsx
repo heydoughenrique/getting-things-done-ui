@@ -8,7 +8,7 @@ import {
     AccordionPanel,
     AccordionIcon,
     Box,
-    Heading
+    Text
 } from '@chakra-ui/react'
 
 function FAQItem({ title, desc }) {
@@ -19,7 +19,7 @@ function FAQItem({ title, desc }) {
             borderWidth='0px 0px 1px 0px'
             borderTop='none'
         >
-            <Heading as='h5' py={4}>
+            <Text as='h5' py={4}>
                 <AccordionButton color='white'>
                     <Box
                         color='white'
@@ -34,7 +34,7 @@ function FAQItem({ title, desc }) {
                     </Box>
                     <AccordionIcon />
                 </AccordionButton>
-            </Heading>
+            </Text>
             <AccordionPanel pb={4}>
                 {desc}
             </AccordionPanel>

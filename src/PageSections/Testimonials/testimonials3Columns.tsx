@@ -1,9 +1,8 @@
-import { Flex, Container, Stack, Badge, Heading, Box, Image, VStack, Text, Button, ButtonGroup } from '@chakra-ui/react'
-import Link from 'next/link'
+import { Box, Container, Flex, Image, Stack, Text } from '@chakra-ui/react'
 
-import { useRouter } from 'next/router'
 import en from '../../locales/en'
 import pt from '../../locales/pt'
+import { useRouter } from 'next/router'
 
 function TestimonialItem({ picture, altText, title, desc, ...rest }) {
     return (

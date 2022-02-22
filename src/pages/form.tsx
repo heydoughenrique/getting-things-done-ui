@@ -1,14 +1,14 @@
-import React from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-
 import {
     Button,
     FormControl,
-    FormLabel,
     FormErrorMessage,
     FormHelperText,
+    FormLabel,
     Input,
 } from "@chakra-ui/react"
+import { SubmitHandler, useForm } from "react-hook-form";
+
+import React from "react";
 
 interface IFormInput {
     fullName: string;
@@ -33,7 +33,7 @@ export default function App() {
                 <FormLabel>Email</FormLabel>
                 <Input type="email"
                     {...register("email", { required: true, maxLength: 20 })} />
-                <FormHelperText>We'll never share your email.</FormHelperText>
+                <FormHelperText>We&apos;ll never share your email.</FormHelperText>
             </FormControl>
 
             <FormControl id="phone">

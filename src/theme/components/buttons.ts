@@ -1,8 +1,8 @@
-export default {
+const button = {
     // style object for base or default style
     baseStyle: {
         textTransform: 'capitalize',
-        fontWeight: '400',
+        fontWeight: '500',
         fontSize: 'md',
 
     },
@@ -40,5 +40,4 @@ export default {
     }
 }
 
-
-
+export default button

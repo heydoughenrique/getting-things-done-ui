@@ -1,5 +1,3 @@
-import theme from "@chakra-ui/theme";
-
 export const layout = {
     // Used for sections
     sizes: {
@@ -27,6 +25,91 @@ export const layout = {
             lg: "1024px",
             xl: "1280px",
             "2xl": "1440px",
+        },
+    },
+
+    layerStyles: {
+        base: {
+            bg: 'gray.50',
+            border: '2px solid',
+            borderColor: 'gray.500',
+        },
+
+        primary: {
+            bg: 'primary.500',
+            color: 'neutral.600',
+            'h1, h2, h3, h4, h5': {
+                color: 'white'
+            },
+            'p, a': {
+                color: 'white'
+            },
+
+            button: {
+                bg: 'secondary.500',
+                color: 'secondary.800',
+
+                _hover: {
+                    bg: 'secondary.400',
+                    color: 'secondary.800',
+                },
+            }
+
+        },
+
+        secondary: {
+            bg: 'secondary.200',
+            color: 'neutral.600',
+            'h1, h2, h3, h4, h5': {
+                color: 'neutral.900'
+            },
+            'p, a': {
+                color: 'neutral.800'
+            },
+
+            button: {
+                bg: 'secondary.500',
+                color: 'secondary.800',
+
+                _hover: {
+                    bg: 'secondary.400',
+                    color: 'secondary.800',
+                },
+            }
+        },
+
+        tertiary: {
+            bg: 'primary.50',
+            color: 'neutral.600',
+            'h1, h2, h3, h4, h5': {
+                color: 'neutral.900'
+            },
+            'p, a': {
+                color: 'neutral.800'
+            },
+
+            button: {
+                bg: 'primary.100',
+                color: 'primary.500',
+
+                _hover: {
+                    bg: 'primary.200',
+                    color: 'primary.500',
+                },
+            }
+
+        },
+
+        neutral: {
+            bg: 'neutral.800',
+            color: 'neutral.100',
+            'h1, h2, h3, h4, h5': {
+                color: 'neutral.500'
+            },
+            'p, a': {
+                color: 'neutral.100'
+            }
+
         },
     },
 }

@@ -13,24 +13,32 @@ export const typography = {
             h1: {
                 fontSize: '6xl', // 60px
                 lineHeight: '1',
-                fontWeight: '500'
+                fontWeight: '700'
             },
 
             h2: {
                 fontSize: '4xl', // 36px
                 lineHeight: 'shorter',
-                fontWeight: '500'
+                fontWeight: '600'
             },
+
+            h3: {
+                fontSize: '2xl', // 24px
+                lineHeight: 'shorter',
+                fontWeight: '600'
+            },
+
 
             h4: {
                 fontSize: 'lg', // 36px
-                fontWeight: '700'
+                fontWeight: '600'
             },
 
 
             'p, a': {
-                color: 'neutral.900',
-                fontSize: 'md'
+                color: 'neutral.600',
+                fontSize: 'md',
+                lineHeight: 'tall'
             },
 
         },

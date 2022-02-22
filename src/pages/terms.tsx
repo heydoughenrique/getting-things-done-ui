@@ -1,13 +1,16 @@
-import MenuSimpleCentered from "../PageSections/Header/MenuSimpleCentered"
+import {Text} from '@chakra-ui/react'
 
-export default function Terms() {
+import MenuSimpleCentered from '../PageSections/Header/MenuSimpleCentered'
 
-    return (
-        <>
-            <MenuSimpleCentered />
-            <h1>Hello</h1>
-        </>
+import {fetchAll} from '../systems/api'
 
+export default function Terms({terms}) {
+  const title = terms.properties.name.title[0].plainText
 
-    )
+  return (
+    <>
+      <MenuSimpleCentered />
+      <Text>{title}</Text>
+    </>
+  )
 }

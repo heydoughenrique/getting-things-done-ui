@@ -1,15 +1,16 @@
-import { Flex, Button, IconButton, Image, Stack, Select, ButtonGroup } from '@chakra-ui/react'
-import SimpleTwoColumns from '../PageSections/HeroSection/SimpleTwoColumns'
-import SimpleCentered from '../PageSections/HeroSection/SimpleCentered'
-import Feature1 from '../PageSections/Features/feature1'
-import FeatureList from '../PageSections/Features/featureList'
-import FAQFooter from '../PageSections/Footer/FAQFooter'
-import SimpleCenteredCTA from '../PageSections/CTA/SimpleCenteredCTA'
-import Slider3Columns from '../components/Slider3Columns'
+import { Button, ButtonGroup, Flex, IconButton, Image, Select, Stack } from '@chakra-ui/react'
+
 import ContactWithImage from '../PageSections/Contact/contactWithImage'
+import FAQFooter from '../PageSections/Footer/FAQFooter'
+import Feature1 from '../PageSections/Features/feature1'
 import Feature2 from '../PageSections/Features/feature2'
-import Testimonials3Columns from '../PageSections/Testimonials/testimonials3Columns'
 import Feature3 from '../PageSections/Features/feature3'
+import FeatureList from '../PageSections/Features/featureList'
+import SimpleCentered from '../PageSections/HeroSection/SimpleCentered'
+import SimpleCenteredCTA from '../PageSections/CTA/SimpleCenteredCTA'
+import SimpleTwoColumns from '../PageSections/HeroSection/SimpleTwoColumns'
+import Slider3Columns from '../components/Slider3Columns'
+import Testimonials3Columns from '../PageSections/Testimonials/testimonials3Columns'
 
 export default function Atelier() {
 

@@ -1,5 +1,4 @@
-import { Flex, Container, Stack, Badge, Heading, Box, Text, Button } from "@chakra-ui/react"
-
+import { Button, Container, Flex, Stack, Text } from "@chakra-ui/react"
 
 export default function WithImageBackground() {
     return (
@@ -40,10 +39,10 @@ export default function WithImageBackground() {
 
                     {/* <Badge variant="solid" background="secondary.500" color="secondary.800">Freelancer tool</Badge> */}
 
-                    <Heading as="h1" fontSize="2xl" maxW={'4xl'}>
+                    <Text as="h1" maxW={'4xl'}>
                         2Easy Accounting at <br />
                         Your Fingertips
-                    </Heading>
+                    </Text>
 
                     <Text fontSize="xl" maxW={'lg'}>
                         From proposal to payment, Incomee is the easiest tool to run your freelance business seamlessly ✌️

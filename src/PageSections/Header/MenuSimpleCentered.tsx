@@ -1,11 +1,11 @@
-import { Flex, Button, IconButton, Image, Stack, Select, ButtonGroup } from '@chakra-ui/react'
-import { useState } from 'react'
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
-import Link from 'next/link'
+import { Button, ButtonGroup, Flex, IconButton, Image, Select, Stack } from '@chakra-ui/react'
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 
-import { useRouter } from 'next/router'
+import Link from 'next/link'
 import en from '../../locales/en'
 import pt from '../../locales/pt'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
 
 export default function MenuSimpleCentered() {
     const router = useRouter()

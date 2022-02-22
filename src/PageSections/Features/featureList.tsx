@@ -1,8 +1,8 @@
-import { Flex, Container, Stack, Badge, Box, Image, VStack, Text, Button, ButtonGroup } from '@chakra-ui/react'
+import { Badge, Box, Button, ButtonGroup, Container, Flex, Image, Stack, Text, VStack } from '@chakra-ui/react'
 
-import { useRouter } from 'next/router'
 import en from '../../locales/en'
 import pt from '../../locales/pt'
+import { useRouter } from 'next/router'
 
 function Feature({ picture, altText, title, desc, ...rest }) {
     return (

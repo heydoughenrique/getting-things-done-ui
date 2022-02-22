@@ -1,18 +1,13 @@
-import { Flex, Container, Stack, Badge, Heading, Box, Image, VStack, Text, Button, ButtonGroup } from '@chakra-ui/react'
+import { Box, Container, Flex, Image, Stack, Text, VStack } from '@chakra-ui/react'
 
-import { useRouter } from 'next/router'
 import en from '../../locales/en'
 import pt from '../../locales/pt'
+import { useRouter } from 'next/router'
 
 export default function Feature3({ badge, tagline, subtitle, ctaPrimary, ctaSecondary }) {
     const router = useRouter()
     const { locale } = router
     const t = locale === 'en' ? en : pt
-
-    const changeLanguage = (e) => {
-        const locale = e.target.value;
-        router.push('/', '/', { locale })
-    }
 
     return (
         <Flex
@@ -41,9 +36,9 @@ export default function Feature3({ badge, tagline, subtitle, ctaPrimary, ctaSeco
                         flex='1'
                     >
 
-                        <Heading as='h2' fontSize='4xl'>
+                        <Text as='h2'>
                             Nossa Clínica de Psicologia em SP
-                        </Heading>
+                        </Text>
 
                         <Text fontSize='lg' maxW={'lg'}>
                             Para terapias presenciais, possuímos em nossas instalações ambientes reservados e climatizados.
