@@ -1,5 +1,6 @@
 import '../theme/external/formik.css'
 import '../theme/external/swiperSlider.css'
+import '../theme/external/listStyles.css'
 
 import {AppProps} from 'next/app'
 import {ChakraProvider} from '@chakra-ui/react'
